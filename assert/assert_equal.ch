@@ -1,5 +1,5 @@
 = assert_equal: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_equal(expected, actual, message=nil)
   

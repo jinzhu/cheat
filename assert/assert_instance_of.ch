@@ -1,5 +1,5 @@
 = assert_instance_of: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_instance_of(klass, object, message="")
   

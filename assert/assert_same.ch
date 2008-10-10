@@ -1,5 +1,5 @@
 = assert_same: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_same(expected, actual, message="")
   

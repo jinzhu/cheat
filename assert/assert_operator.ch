@@ -1,5 +1,5 @@
 = assert_operator: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_operator(object1, operator, object2, message="")
   

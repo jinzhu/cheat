@@ -31,7 +31,7 @@
   
   Substitution values
   .?                      Class name
-  #?                      ID attribute
+  \#?                      ID attribute
   [foo=?]                 Attribute value
   May be string or regular expression, e.g. "[foo=?]", /bar/i
   

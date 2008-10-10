@@ -1,5 +1,5 @@
 = assert_throws: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_throws(expected_symbol, message="", &proc)
   

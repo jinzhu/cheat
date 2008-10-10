@@ -1,5 +1,5 @@
 = assert_routing: |
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_routing(path, options, defaults={}, extras={}, message=nil)
   
@@ -9,16 +9,16 @@
   
   Examples
   
-   # Assert a basic route: a controller with the default action (index)
+   \# Assert a basic route: a controller with the default action (index)
    assert_routing('/home', :controller => 'home', :action => 'index')
   
-   # Test a route generated with a specific controller, action, and parameter (id)
+   \# Test a route generated with a specific controller, action, and parameter (id)
    assert_routing('/entries/show/23', :controller => 'entries', :action => 'show', id => 23)
   
-   # Assert a basic route (controller + default action), with an error message if it fails
+   \# Assert a basic route (controller + default action), with an error message if it fails
    assert_routing('/store', { :controller => 'store', :action => 'index' }, {}, {}, 'Route for store index not generated properly')
   
-   # Tests a route, providing a defaults hash
+   \# Tests a route, providing a defaults hash
    assert_routing 'controller/action/9', {:id => "9", :item => "square"}, {:controller => "controller", :action => "action"}, {}, {:item => "square"}
   
 

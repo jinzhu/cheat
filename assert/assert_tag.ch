@@ -41,48 +41,48 @@
   Examples
 
   
-  # Assert that there is a \"span\" tag
+  \# Assert that there is a \"span\" tag
   assert_tag :tag => \"span\"
 
   
-  # Assert that there is a \"span\" tag with id=\"x\"
+  \# Assert that there is a \"span\" tag with id=\"x\"
   assert_tag :tag => \"span\", :attributes => { :id => \"x\" }
 
   
-  # Assert that there is a \"span\" tag using the short-hand
+  \# Assert that there is a \"span\" tag using the short-hand
   assert_tag :span
 
   
-  # Assert that there is a \"span\" tag with id=\"x\" using the short-hand
+  \# Assert that there is a \"span\" tag with id=\"x\" using the short-hand
   assert_tag :span, :attributes => { :id => \"x\" }
 
   
-  # Assert that there is a \"span\" inside of a \"div\"
+  \# Assert that there is a \"span\" inside of a \"div\"
   assert_tag :tag => \"span\", :parent => { :tag => \"div\" }
 
   
-  # Assert that there is a \"span\" somewhere inside a table
+  \# Assert that there is a \"span\" somewhere inside a table
   assert_tag :tag => \"span\", :ancestor => { :tag => \"table\" }
 
   
-  # Assert that there is a \"span\" with at least one \"em\" child
+  \# Assert that there is a \"span\" with at least one \"em\" child
   assert_tag :tag => \"span\", :child => { :tag => \"em\" }
 
   
-  # Assert that there is a \"span\" containing a (possibly nested)
-  # \"strong\" tag.
+  \# Assert that there is a \"span\" containing a (possibly nested)
+  \# \"strong\" tag.
   assert_tag :tag => \"span\", :descendant => { :tag => \"strong\" }
 
   
-  # Assert that there is a \"span\" containing between 2 and 4 \"em\" tags
-  # as immediate children
+  \# Assert that there is a \"span\" containing between 2 and 4 \"em\" tags
+  \# as immediate children
   assert_tag :tag => \"span\",
              :children => { :count => 2..4, :only => { :tag => \"em\" } }
 
   
-  # Get funky: assert that there is a \"div\", with an \"ul\" ancestor
-  # and an \"li\" parent (with \"class\" = \"enum\"), and containing a
-  # \"span\" descendant that contains text matching /hello world/
+  \# Get funky: assert that there is a \"div\", with an \"ul\" ancestor
+  \# and an \"li\" parent (with \"class\" = \"enum\"), and containing a
+  \# \"span\" descendant that contains text matching /hello world/
   assert_tag :tag => \"div\",
              :ancestor => { :tag => \"ul\" },
              :parent => { :tag => \"li\",

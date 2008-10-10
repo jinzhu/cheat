@@ -42,7 +42,7 @@
 == You can override the #protect? method in your controller to only protect certain actions:
 
   
-  # don't protect the login and the about method
+  \# don't protect the login and the about method
   def protect?(action)
     if ['login', 'about'].include?(action)
        return false
@@ -56,7 +56,7 @@
 == You can also override #authorized? in your controller to restrict the actions based on the user:
 
   
-  # only allow nonbobs
+  \# only allow nonbobs
   def authorized?(user)
     user.login != \"bob\" 
   end

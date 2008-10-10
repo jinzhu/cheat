@@ -1,5 +1,5 @@
 = assert_raise: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_raise(*args) {|| ...}
   

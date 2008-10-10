@@ -1,5 +1,5 @@
 = assert_match: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_match(pattern, string, message="")
   

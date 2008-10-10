@@ -25,7 +25,7 @@
   (prefer-coding-system 'utf-8)
   
 == Emacs opens in yaml-mode and outdent-mode when first line is:
-  # -*- mode: yaml; mode: outdent; -*-
+  \# -*- mode: yaml; mode: outdent; -*-
   
 == For more:
   http://wiki.rubyonrails.org/rails/pages/HowToUseEmacsWithRails

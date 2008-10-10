@@ -1,9 +1,9 @@
 = zsh_array: |-
-  # Standard array
+  \# Standard array
   	array=(~/.zshenv, ~/.zshrc, ~/.zlogout)
   	print ${array:t}
   
-  # Associative array
+  \# Associative array
   	typeset -A ass_arr
   	ass_arr=(one 1 two 2 three 3 four 4)
   	print ${(k)ass_arr}

@@ -1,5 +1,5 @@
 = assert_valid: |
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_valid(record)
   
@@ -7,7 +7,7 @@
   
   Examples
   
-    # assert that a newly created record is valid
+    \# assert that a newly created record is valid
     model = Model.new
     assert_valid(model)
   

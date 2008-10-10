@@ -1,5 +1,5 @@
 = assert_nothing_raised: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_nothing_raised(*args) {|| ...}
   

@@ -1,5 +1,5 @@
 = assert_block: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_block(message="assert_block failed.") {|| ...}
   

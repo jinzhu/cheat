@@ -1,5 +1,5 @@
 = assert_response: |
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_response(type, message = nil)
   
@@ -14,9 +14,9 @@
   
   Examples
   
-    # assert that the response was a redirection
+    \# assert that the response was a redirection
     assert_response :redirect
   
-    # assert that the response code was status code 401 (unauthorized)
+    \# assert that the response code was status code 401 (unauthorized)
     assert_response 401
 

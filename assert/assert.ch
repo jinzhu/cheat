@@ -1,5 +1,5 @@
 = assert: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert(boolean, message=nil)
   

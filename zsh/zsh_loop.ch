@@ -1,5 +1,5 @@
 = zsh_loop: |
-  # Loop through files with Zsh
+  \# Loop through files with Zsh
   
   	for i (/home/**/q*) rm $i
   

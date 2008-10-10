@@ -1,5 +1,5 @@
 = assert_in_delta: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_in_delta(expected_float, actual_float, delta, message="")
   

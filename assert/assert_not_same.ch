@@ -1,5 +1,5 @@
 = assert_not_same: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_not_same(expected, actual, message="")
   

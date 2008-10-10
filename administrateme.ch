@@ -9,10 +9,10 @@
 == Defining modules (tabs) for the app:
   
   class ApplicationController < ActionController::Base
-    # Main definitions
+    \# Main definitions
     set_module :products
     set_module :categories
-    # Setting modules by request
+    \# Setting modules by request
     def modules
       set_module :users if current_user.has_role?('admin')
     end

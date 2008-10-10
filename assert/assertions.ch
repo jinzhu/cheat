@@ -1,10 +1,10 @@
 = assertions: "# Credit: http://nubyonrails.com/articles/ruby-rails-test-rails-cheat-sheet
 
-  # Use 'cheat assert_raise' for more details
+  \# Use 'cheat assert_raise' for more details
 
   
 
-  # Standard Ruby Assertions
+  \# Standard Ruby Assertions
 
   
 
@@ -50,7 +50,7 @@
 
   
 
-  # Rails Assertions
+  \# Rails Assertions
 
   
 

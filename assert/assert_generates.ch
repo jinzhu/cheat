@@ -1,5 +1,5 @@
 = assert_generates: |
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_generates(expected_path, options, defaults={}, extras = {}, message=nil)
   
@@ -9,16 +9,16 @@
   
   Examples
   
-    # Asserts that the default action is generated for a route with no action
+    \# Asserts that the default action is generated for a route with no action
     assert_generates("/items", :controller => "items", :action => "index")
   
-    # Tests that the list action is properly routed
+    \# Tests that the list action is properly routed
     assert_generates("/items/list", :controller => "items", :action => "list")
   
-    # Tests the generation of a route with a parameter
+    \# Tests the generation of a route with a parameter
     assert_generates("/items/list/1", { :controller => "items", :action => "list", :id => "1" })
   
-    # Asserts that the generated route gives us our custom route
+    \# Asserts that the generated route gives us our custom route
     assert_generates "changesets/12", { :controller => 'scm', :action => 'show_diff', :revision => "12" }
   
 

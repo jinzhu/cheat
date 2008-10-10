@@ -1,5 +1,5 @@
 = assert_no_match: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_no_match(regexp, string, message="")
   

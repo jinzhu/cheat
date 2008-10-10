@@ -1,5 +1,5 @@
 = assert_dom_equal: |
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_dom_equal(expected, actual, message = "")
   
@@ -7,7 +7,7 @@
   
   Examples
   
-    # assert that the referenced method generates the appropriate HTML string
+    \# assert that the referenced method generates the appropriate HTML string
     assert_dom_equal '<a href="http://www.example.com">Apples</a>', link_to("Apples", "http://www.example.com")
   
 

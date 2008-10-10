@@ -1,5 +1,5 @@
 = zsh_ftp: |
-  # Zsh ftp
+  \# Zsh ftp
   (need to autoload zsh/ftp)
   
   

@@ -1,5 +1,5 @@
 = assert_send: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_send(send_array, message="")
   

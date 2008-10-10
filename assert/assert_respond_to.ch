@@ -1,5 +1,5 @@
 = assert_respond_to: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_respond_to(object, method, message="")
   

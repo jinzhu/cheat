@@ -1,5 +1,5 @@
 = assert_nothing_thrown: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_nothing_thrown(message="", &proc)
   

@@ -1,5 +1,5 @@
 = assert_not_nil: |-
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_not_nil(object, message="")
   

@@ -1,5 +1,5 @@
 = assert_redirected_to: |
-  # 'cheat assertions' for the rest
+  \# 'cheat assertions' for the rest
   
   assert_redirected_to(options = {}, message=nil)
   
@@ -7,10 +7,10 @@
   
   Examples
   
-    # assert that the redirection was to the "index" action on the WeblogController
+    \# assert that the redirection was to the "index" action on the WeblogController
     assert_redirected_to :controller => "weblog", :action => "index"
   
-    # assert that the redirection was to the named route login_url
+    \# assert that the redirection was to the named route login_url
     assert_redirected_to login_url
   
 

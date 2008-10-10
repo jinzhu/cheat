@@ -1,5 +1,5 @@
 = zsh_rename: |-
-  # Renaming files with Zsh
+  \# Renaming files with Zsh
   
   
 == ### Numerical prefix:
@@ -13,23 +13,23 @@
 == ### Rename all files from name.mp3 to Name.mp3:
   $  zmv `([a-z])(*).mp3` `${(C)1}$2.mp3`	
   
-  ### Capitalize file
+  \### Capitalize file
   $  zmv '([a-z])(*).pdf' '${(C)1}$2.pdf'
   
-  ### Replaces spaces with underlines
+  \### Replaces spaces with underlines
   $  zmv '* *' '$f:gs/ /_'
   
-  ### FOO to foo
+  \### FOO to foo
   $  for i in *(.); mv $i ${i:l}
   
-  ### Rename pic1.jpg to pic0001.jpg ...
+  \### Rename pic1.jpg to pic0001.jpg ...
   $  zmv 'pic(*).jpg' 'pic${(1:4::0:)1}.jpg'
   $  zmv '(**/)pic(*).jpg' '$1/pic1:4::0:)2}.jpg'  # recursive
   
-  ### Remove spaces from filenames
+  \### Remove spaces from filenames
   $  for a in ./**/*\ *(Dod); do mv $a ${a:h}/${a:t:gs/ /_}; done
   
-  ### Substitute r for l
+  \### Substitute r for l
   
   		s/l/r[/]
   
