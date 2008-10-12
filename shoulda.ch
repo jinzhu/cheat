@@ -1,32 +1,27 @@
 = shoulda: |
   
-  Installing
+== Installing
   ----------
   
-    As a Rails plugin
+=== As a Rails plugin
     -----------------
-    
       script/plugin install git://github.com/thoughtbot/shoulda.git
       
-    As a Rails gem
+=== As a Rails gem
     --------------
-    
-== In config/environment.rb:
-        config.gem 'thoughtbot-shoulda', :lib => 'shoulda/rails', :source => 'http://gems.github.com'
-        
-== Then run:
-        rake gems:install gems:unpack
-    
-    As a standalone gem
-    -------------------
-    
-== Run:
-        sudo gem install thoughtbot-shoulda -s http://gems.github.com
+      In config/environment.rb:
+          config.gem 'thoughtbot-shoulda', :lib => 'shoulda/rails', :source => 'http://gems.github.com'
+      Then run:
+          rake gems:install gems:unpack
       
-== In your test, or test_helper.rb:
-        require 'shoulda'
+=== As a standalone gem
+    -------------------
+      Run:
+          sudo gem install thoughtbot-shoulda -s http://gems.github.com
+      In your test, or test_helper.rb:
+          require 'shoulda'
   
-  Assertions
+= Assertions
   ----------
   
     assert_contains <array>, <object in array, or regular expression to match>
@@ -47,35 +42,8 @@
      email.subject =~ /activated/ && email.to.include?('bob@email.com') 
     end
   
-  Basics
-  ------
   
-    class FooTest < Test::Unit::TestCase
-      context <context description string> do
-        setup do
-          # ...
-        end
-        
-        teardown do
-        end
-        
-        should <description string> do
-        end
-        
-        should_eventually <description string>
-        should_eventually <description string> do
-          # this code can be broken, but won't break the build
-        end
-      end
-      
-      should <string description> do
-        # ...
-      end
-    end
-  
-  
-  
-  General Macros
+= General Macros
   --------------
     
     should_change "Post.count", :from => 0, :to => 1
@@ -85,20 +53,18 @@
     should_change "@post.title" :to   => "new"
     should_not_change "Post.count"
   
-  Macros for class under test
+= Macros for class under test
   ---------------------------
   
     should_have_class_methods :find, :destroy
     should_have_instance_methods :email, :name, :name=
   
-  ActiveRecord Macros
+= ActiveRecord Macros
   -------------------
   
     should_have_db_columns :id, :email, :name, :created_at
-    should_have_db_column :email, :type => "string", :default => nil,   :precision
-    => nil, :limit    => 255,
-                                  :null => true,     :primary => false, :scale    
-                                  => nil, :sql_type => 'varchar(255)'
+    should_have_db_column :email, :type => "string", :default => nil,   :precision => nil, :limit => 255,
+                                  :null => true,     :primary => false, :scale => nil, :sql_type => 'varchar(255)'
     
     should_have_indices :email, :name, [:commentable_type, :commentable_id]
     should_have_index :age
@@ -110,8 +76,8 @@
     
     should_ensure_length_at_least :name, 3
     should_ensure_length_is :ssn, 9
-    should_ensure_value_in_range :age, (0..100)
-    
+    should_ensure_length_in_range :password, (6..20)
+
     should_only_allow_numeric_values_for :age
     
     should_have_readonly_attributes :password, :admin_flag
@@ -128,8 +94,9 @@
     should_protect_attributes :password, :admin_flag
     
     should_allow_values_for :phone, "(123) 999-3049", "201-0023"
-    should_not_allow_values_for :phone, "I am totally not a phone number",
-    "201-0023"
+    should_not_allow_values_for :phone, "I am totally not a phone number","201-0023"
+    should_ensure_value_in_range :age, (0..100)
+    
     
     should_belong_to :parent
     
@@ -141,21 +108,69 @@
     
     should_have_and_belong_to_many :posts, :cars
   
-  ActionController Macros
+= ActionController Macros
   -----------------------
   
     should_assign_to
+      should_assign_to :user, :posts
+      should_assign_to :user, :class => User
+      should_assign_to :user, :equals => '@user'
+
     should_be_restful
+
     should_belong_to
-    should_filter_params
+      should_belong_to :parent
+
+    should_filter_params :password, :ssn
+
     should_not_assign_to
-    should_not_set_the_flash
+
     should_redirect_to
+
     should_render_a_form
+
     should_render_template
-    should_respond_with
+
+    should_render_with_layout 'special'
+    should_render_without_layout
+    
+    should_respond_with :success | :redirect
+    should_respond_with_content_type 'application/rss+xml'
+
+    should_return_from_session :user_id, '@user.id'
+    should_return_from_session :message, '"Free stuff"'
+
     should_respond_with_xml_for
-    should_route
+
+    should_route :post, '/posts', :controller => :posts, :action => :create
+
     should_set_the_flash_to
   
+    should_not_set_the_flash
 
+= Basics
+  ------
+  
+    class FooTest < Test::Unit::TestCase
+      context <context description string> do
+        setup do
+          \# ...
+        end
+        
+        teardown do
+        end
+        
+        should <description string> do
+        end
+        
+        should_eventually <description string>
+        should_eventually <description string> do
+          \# this code can be broken, but won't break the build
+        end
+
+       \# runs before "setup"
+       before_should "find all users" do
+         User.expects(:find).with(:all).returns(@users)
+       end
+      end
+    end
