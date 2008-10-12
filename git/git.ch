@@ -1,11 +1,14 @@
-= git: |-
-  Setup
+= GIT: |-
+
+== Setup
   -----
   
   git clone <repo>
     clone the repository specified by <repo>; this is similar to "checkout" in some other version control systems such as Subversion and CVS
   
-== Add colors to your ~/.gitconfig file:
+=== Add Branch to bash
+    PS1='\w$(__git_ps1 "\033[31m[%s]\033[0m")\$ '
+=== Add colors to your ~/.gitconfig file:
   
     [color]
       branch = auto
@@ -33,7 +36,7 @@
       whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
   
   
-== Add aliases to your ~/.gitconfig file:
+=== Add aliases to your ~/.gitconfig file:
   
     [alias]
       st = status
@@ -44,7 +47,7 @@
       lg = log -p
   
   
-  Configuration
+== Configuration
   -------------
   
   git config user.email johndoe@example.com
@@ -58,7 +61,7 @@
   
   You can add "--global" after "git config" to any of these commands to make it apply to all git repos (writes to ~/.gitconfig).
   
-  Info
+== Info
   ----
   
   git diff
@@ -100,7 +103,7 @@
   git whatchanged <file>
     show only the commits which affected <file> listing the most recent first
   
-  Adding / Deleting
+== Adding / Deleting
   -----------------
   
   git add <file1> <file2> ...
@@ -115,7 +118,7 @@
   git rm <file1> <file2> ...
     remove <file1>, <file2>, etc... from the project
   
-  Committing
+== Committing
   ----------
   
   git commit <file1> <file2> ... [-m <msg>]
@@ -130,7 +133,7 @@
   git commit --amend <file1> <file2> ...
     include changes made to <file1>, <file2>, etc..., and recommit with previous commit message
   
-  Sharing
+== Sharing
   -------
   
   git pull
@@ -142,7 +145,7 @@
   git push origin <branch>
     update the server with your commits made to <branch> since your last push.  This is always *required* for new branches that you wish to share.  After the first explicity push, "git push" by itself is sufficient.
   
-  Branching
+== Branching
   ---------
   
   git branch
@@ -184,7 +187,7 @@
     removes a branch from a remote repository. 
     Example: git push origin :heads/old_branch_to_be_deleted
   
-  Merging
+== Merging
   -------
   
   git merge <branch>
@@ -196,21 +199,21 @@
   git merge <branch> -s ours
     merge branch <branch> into the current branch, but drops any changes in <branch>, using the current tree as the new tree
   
-  Conflicts
+== Conflicts
   ---------
   
   git mergetool
     Work through conflicted files by opening them in your mergetool (opendiff, kdiff3, etc.) and choosing left/right chunks. The merged result is staged for commit.
   
-== For binary files or if mergetool won't do, resolve the conflict(s) manually and then do:
+  For binary files or if mergetool won't do, resolve the conflict(s) manually and then do:
   
     git add <file1> [<file2> ...]
   
-== Once all conflicts are resolved and staged, commit the pending merge with:
+  Once all conflicts are resolved and staged, commit the pending merge with:
   
     git commit
   
-  Reverting
+==  Reverting
   ---------
   
   git revert <rev>
@@ -222,7 +225,7 @@
   git checkout .
     re-checkout all files, overwriting any local changes.  This is most similar to "svn revert" if you're used to Subversion commands
   
-  Fix mistakes / Undo
+== Fix mistakes / Undo
   ----
   
   git reset --hard
@@ -240,13 +243,13 @@
   git reset --soft HEAD^
     
   
-  Plumbing
+== Plumbing
   --------
   
   test <sha1-A> = $(git merge-base <sha1-A> <sha1-B>)
     determine if merging sha1-B into sha1-A is achievable as a fast forward; non-zero exit status is false.
   
-  Stashing
+== Stashing
   --------
   
   git stash save <optional-name>
@@ -264,7 +267,7 @@
   git stash show <stash-name> -p
     show the contents of a stash - accepts all diff args
   
-  Remotes
+== Remotes
   -------
   
   git remote add <branch> <remote branch>
@@ -282,7 +285,7 @@
     Prune deleted remote repositories from git branch listing
   
   
-  Environment Variables
+== Environment Variables
   ---------------------
   
   GIT_AUTHOR_NAME, GIT_COMMITTER_NAME 
