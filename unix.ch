@@ -1,7 +1,6 @@
 = unix: |-
-== One of Unix's most useful features is its large number of text/data manipulations programs. Some of the more propular include:
   
-  h2. File Manipulation
+== File Manipulation
   
   * mkdir - make directory
     mkdir -p /dir/new/dirs/even/if/not/existing
@@ -16,7 +15,7 @@
   * df - disk space free
   * du - disk space usage
   
-  h2. archive files
+== archive files
   * tar - archive many files
     tar xvzf file.tar.gz  # extracts
     tar xvjf file.tar.bz2 # extracts
@@ -24,7 +23,7 @@
   * zip, unzip, arj, rar, compress - more formats
   
   
-  h2. Working on many files
+== Working on many files
    
   * find
     find . -iname *.foo -type f -print -exec command {} \\; # executes command on each *.foo file below given directory
@@ -33,7 +32,7 @@
   * for x in y ; do ... ; done
     for foo in *4?.* ; do echo $foo ; done
   
-  h2. Learn more, learn where
+== Learn more, learn where
   
   * man - manual page for a command
   * info - man, but different
@@ -43,7 +42,7 @@
   * locate - show path for any file whose **name** contains substring
   * basename, dirname - get the file part / directory part of a pathname
   
-  h2. Processing text files
+== Processing text files
   
   * cat - concatenate and display files
   * less - output contents of a file interactively
@@ -62,7 +61,7 @@
   * strings - show any contained ASCII (non-binary) sequences
   * file - guess the type of a file
   
-  h2. Column-oriented utilities
+== Column-oriented utilities
   
   * cut - remove selected fields from each line of a file
   * paste - join corresponding lines of several files, or subsequent lines of one file
@@ -72,14 +71,14 @@
   * wc - word (line, letter) count
     wc file1 file2 dir/*
   
-  h2. Obsolete 
+== Obsolete 
   
   While sed, awk and tr are still used, and still useful, any of perl, ruby or python from the command line present a more powerful and integrated interface 
   * awk - pattern scanning and processing language
   * sed - stream editor
   * tr - translate characters
   
-  h2. Other
+== Other
   
   * wget - fetch a URL and store locally
     wget http://website.com/path/file.html

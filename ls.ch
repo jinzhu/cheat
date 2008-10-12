@@ -1,3 +1,0 @@
-= ls: !binary |
-  GA==
-

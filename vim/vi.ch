@@ -1,4 +1,5 @@
-= vi: "Edit
+= vi: 
+== Edit
 
   dd  delete line
 
@@ -6,7 +7,7 @@
 
   
 
-  Navigation
+== Navigation
 
   h j k l left, down, up right, one character/line at a time
 
@@ -23,8 +24,7 @@
   $ end of line
 
   
-
-  File
+== File
 
   :u undo
 

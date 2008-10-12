@@ -18,9 +18,9 @@
   $ sake -i http://pastie.caboo.se/73801.txt
   $ sake -T
   $ sake pastie:send
-    # Sends STDIN or FILE=file to Pastie;
-    # USAGE: cat some_code.rb | sake pastie:send
-    # OR:    sake pastie:send FILE=some_code.rb
+    Sends STDIN or FILE=file to Pastie;
+    USAGE: cat some_code.rb | sake pastie:send
+    OR:    sake pastie:send FILE=some_code.rb
   
 == On OSX, you can get the url for your new pastie in the clipboard using pbcopy:
   $ cat some_code.rb | sake pastie:send | pbcopy

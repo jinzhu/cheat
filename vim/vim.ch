@@ -1,6 +1,5 @@
-= vim: "Cursor movement
-
-  
+= vim: 
+== Cursor movement
 
   h - move left
 
@@ -40,7 +39,7 @@
 
   
 
-  Insert Mode - Inserting/Appending text
+== Insert Mode - Inserting/Appending text
 
   
 
@@ -248,9 +247,7 @@
 
   
 
-  Tabs (Vim7)
-
-  
+== Tabs (Vim7)
 
   gt - Next tab
 
@@ -266,8 +263,7 @@
 
   
 
-  Command Line Options
+== Command Line Options
 
   
-
   $vim -c \"vim command\" file - execute an editor command on startup"

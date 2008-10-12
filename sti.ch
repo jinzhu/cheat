@@ -1,4 +1,4 @@
-= sti: |-
+= STI:
   Single Table Inheritance
   
   class CreateSTI < ActiveRecord::Migration
@@ -39,7 +39,7 @@
   
   If you cannot use type (radio button helper has problems
   with it) define the new column in your superclass model
-== like this:
+  like this:
   def self.inheritance_column
    'role' 
   end

@@ -1,26 +1,21 @@
-= zentest: |
+= Zentest: |
   gem install ZenTest
   
-  # autotest
-  
+== autotest
   $ autotest [options]
   
-== options:
+  options:
           -h
           -help           You're looking at it.
-  
           -v              Be verbose. Prints files that autotest doesn't know how to map to tests.
-  
           -q              Be more quiet.
-  
           -f              Fast start. Doesn't initially run tests at start.
   
-  # Rails testing
+== Rails testing
   
   require 'test/rails'
   
-  ## assertions
-  
+=== assertions
   assert_empty []
   assert_in_epsilon a, b, 0.5
   assert_include [a, b, c], a
